@@ -1,0 +1,42 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+datasource db {
+    provider = "sqlite"
+    url      = env("DATABASE_URL")
+}
+
+generator client {
+    provider = "prisma-client-js"
+}
+
+generator dbml {
+    provider = "prisma-dbml-generator"
+    output   = "../dbml"
+}
+
+generator zod {
+    provider                         = "zod-prisma-types"
+    output                           = "../zod"
+    useMultipleFiles                 = false // default: false
+    createInputTypes                 = true // default: true
+    createModelTypes                 = true // default: true
+    addInputTypeValidation           = true // default: true
+    addIncludeType                   = true // default: true
+    addSelectType                    = true // default: true
+    validateWhereUniqueInput         = false // default: false
+    createOptionalDefaultValuesTypes = false // default: false
+    createRelationValuesTypes        = false // default: false
+    createPartialTypes               = false // default: false
+    useDefaultValidators             = true // default: true
+    coerceDate                       = true // default: true
+    writeNullishInModelTypes         = false // default: false
+}
+
+model Example {
+    id        String   @id @default(cuid())
+    createdAt DateTime @default(now())
+    updatedAt DateTime @updatedAt
+
+    @@map("example")
+}

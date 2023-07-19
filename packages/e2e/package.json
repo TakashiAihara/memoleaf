@@ -1,0 +1,20 @@
+{
+  "name": "@acme/e2e",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "lint": "eslint lint",
+    "lint:fix": "pnpm lint --fix",
+    "test:e2e": "playwright test",
+    "type-check": "tsc --noEmit",
+    "with-env": "dotenv -e ../../.env --"
+  },
+  "devDependencies": {
+    "@acme/eslint-config": "workspace:^",
+    "@acme/prettier-config": "workspace:^",
+    "@playwright/test": "^1.36.1",
+    "@types/node": "^18.16.19",
+    "playwright-test-coverage": "^1.2.12",
+    "typescript": "^5.1.6"
+  }
+}

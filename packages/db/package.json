@@ -1,0 +1,34 @@
+{
+  "name": "@acme/db",
+  "version": "0.1.0",
+  "license": "MIT",
+  "main": "./index.ts",
+  "types": "./index.ts",
+  "scripts": {
+    "clean": "rm -rf .turbo node_modules",
+    "db:clear": "pnpm with-env tsx utils/clear.ts",
+    "db:generate": "pnpm with-env prisma generate",
+    "db:push": "pnpm with-env prisma db push --skip-generate",
+    "db:seed": "pnpm with-env prisma db seed",
+    "db:studio": "pnpm with-env prisma studio --port 5556",
+    "db:truncate": "pnpm with-env tsx utils/truncate.ts",
+    "lint": "eslint lint",
+    "lint:fix": "pnpm lint --fix",
+    "with-env": "dotenv -e ../../.env --"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.16.19",
+    "dotenv-cli": "^7.2.1",
+    "prisma": "^5.0.0",
+    "prisma-dbml-generator": "^0.10.0",
+    "tsx": "^3.12.7",
+    "typescript": "^5.1.6",
+    "zod-prisma-types": "^2.7.4"
+  },
+  "prisma": {
+    "seed": "tsx utils/seed.ts"
+  }
+}

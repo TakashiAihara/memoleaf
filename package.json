@@ -1,0 +1,45 @@
+{
+  "name": "my-t3-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "turbo build",
+    "clean": "git clean -xdf node_modules",
+    "clean:workspaces": "turbo clean",
+    "cli:build": "turbo cli:build",
+    "db:clear": "turbo db:clear",
+    "db:generate": "turbo db:generate",
+    "db:init": "turbo db:clear && turbo db:push && turbo db:seed",
+    "db:migrate": "turbo db:migrate",
+    "db:push": "turbo db:push db:generate",
+    "db:seed": "turbo db:seed",
+    "db:studio": "turbo db:studio",
+    "db:truncate": "turbo db:truncate",
+    "dev": "turbo dev --parallel",
+    "dev:android": "turbo dev:android --parallel",
+    "dev:ios": "turbo dev:ios --parallel",
+    "format": "prettier --write \"**/*.{js,cjs,mjs,ts,tsx,md,json}\" --ignore-path .gitignore",
+    "lint": "turbo lint && manypkg check",
+    "lint:fix": "turbo lint:fix && manypkg fix",
+    "test:e2e": "turbo test:e2e",
+    "test:unit": "turbo test:unit",
+    "type-check": "turbo type-check"
+  },
+  "dependencies": {
+    "@acme/eslint-config": "workspace:^",
+    "@acme/prettier-config": "workspace:^",
+    "@manypkg/cli": "^0.21.0",
+    "turbo": "^1.10.8"
+  },
+  "devDependencies": {
+    "husky": "^8.0.3",
+    "semver": "^7.5.4"
+  },
+  "packageManager": "pnpm@8.6.0",
+  "engines": {
+    "node": ">=v18.16.0"
+  },
+  "ct3aMetadata": {
+    "initVersion": "7.15.0"
+  }
+}

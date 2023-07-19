@@ -1,0 +1,83 @@
+{
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.fixAll": true
+  },
+  "eslint.rules.customizations": [{ "rule": "*", "severity": "warn" }],
+  "eslint.workingDirectories": [
+    { "pattern": "apps/*/" },
+    { "pattern": "packages/*/" }
+  ],
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "tailwindCSS.experimental.configFile": "./packages/config/tailwind/index.ts",
+  "cSpell.words": [
+    "authed",
+    "automerge",
+    "buildscript",
+    "CLIENTVAR",
+    "dbml",
+    "Fontisto",
+    "ianvs",
+    "manypkg",
+    "mypage",
+    "nativewind",
+    "NEXTAUTH",
+    "nextjs",
+    "outfile",
+    "packagejson",
+    "Pressable",
+    "Skus",
+    "Solito",
+    "superjson",
+    "tailwindcss",
+    "tanstack",
+    "Transpiles",
+    "TRPC",
+    "Turborepo",
+    "Typesafe",
+    "unauthed",
+    "Vercel"
+  ],
+  "[TypeScript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[dockercompose]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+  },
+  "[prisma]": {
+    "editor.defaultFormatter": "Prisma.prisma",
+    "editor.formatOnSave": true
+  },
+  "files.associations": {
+    "*.tsx": "typescriptreact",
+    "*.env.development": "env",
+    "*.env.test": "env",
+    "*.env": "env",
+    ".env": "env",
+    ".env.sample": "env",
+    ".env.example": "env",
+    "*.env.production": "env"
+  },
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true
+  },
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "prettier.enable": true,
+  "prettier.embeddedLanguageFormatting": "auto"
+}
