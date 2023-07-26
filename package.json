@@ -1,5 +1,5 @@
 {
-  "name": "my-t3-app",
+  "name": "memoleaf",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -26,14 +26,16 @@
     "type-check": "turbo type-check"
   },
   "dependencies": {
-    "@acme/eslint-config": "workspace:^",
-    "@acme/prettier-config": "workspace:^",
+    "@acme/eslint-config": "^0.1.0",
+    "@acme/prettier-config": "^0.1.0",
     "@manypkg/cli": "^0.21.0",
-    "turbo": "^1.10.8"
+    "turbo": "^1.10.11"
   },
   "devDependencies": {
+    "eslint": "^8.45.0",
     "husky": "^8.0.3",
-    "semver": "^7.5.4"
+    "semver": "^7.5.4",
+    "typescript": "^5.1.6"
   },
   "packageManager": "pnpm@8.6.0",
   "engines": {

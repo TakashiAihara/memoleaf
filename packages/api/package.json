@@ -1,19 +1,27 @@
 {
-  "name": "@acme/type",
+  "name": "@acme/api",
   "version": "0.1.0",
   "license": "MIT",
-  "types": "index.d.ts",
+  "main": "./index.ts",
+  "types": "./index.ts",
   "scripts": {
     "clean": "rm -rf .turbo node_modules",
     "lint": "eslint .",
     "lint:fix": "pnpm lint --fix",
     "type-check": "tsc --noEmit"
   },
+  "dependencies": {
+    "@acme/auth": "^0.1.0",
+    "@acme/db": "^0.1.0",
+    "@trpc/client": "^10.35.0",
+    "@trpc/server": "^10.35.0",
+    "superjson": "1.13.1",
+    "zod": "^3.21.4"
+  },
   "devDependencies": {
     "@acme/eslint-config": "^0.1.0",
     "@acme/prettier-config": "^0.1.0",
-    "eslint": "^8.42.0",
+    "eslint": "^8.45.0",
     "typescript": "^5.1.6"
-  },
-  "typeScriptVersion": "5.1.6"
+  }
 }
