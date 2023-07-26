@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 
 import { api } from "~/utils/api";
+import AuthButton from "~/components/auth";
 
 export const Home: NextPage = () => {
   const examples = api.example.all.useQuery();
@@ -34,6 +35,7 @@ export const Home: NextPage = () => {
           <h1 className="text-5xl font-extrabold tracking-tight text-white sm:text-[5rem]">
             Create Example
           </h1>
+          <AuthButton />
           <div>
             <button
               className="rounded-md bg-indigo-600 px-4 py-2 text-lg font-bold text-white hover:bg-indigo-500"

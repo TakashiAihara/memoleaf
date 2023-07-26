@@ -1,8 +1,9 @@
 import "~/styles/globals.css";
 
 import type { AppType } from "next/app";
-import type { Session } from "next-auth";
-import { SessionProvider } from "next-auth/react";
+
+import { SessionProvider } from "@acme/auth/client";
+import { type Session } from "@acme/auth/types";
 
 import { api } from "~/utils/api";
 

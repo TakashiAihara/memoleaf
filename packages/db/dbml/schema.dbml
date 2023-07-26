@@ -21,6 +21,7 @@ Table Account {
   scope String
   id_token String
   session_state String
+  refresh_token_expires_in Int
   user User [not null]
 
   indexes {
