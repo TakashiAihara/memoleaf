@@ -290,9 +290,6 @@ importers:
         specifier: ^5.0.0
         version: 5.0.0(prisma@5.0.0)
     devDependencies:
-      '@acme/type':
-        specifier: ^0.1.0
-        version: link:../type
       '@types/node':
         specifier: ^18.16.19
         version: 18.16.19
