@@ -30,12 +30,18 @@ generator zod {
     writeNullishInModelTypes         = false // default: false
 }
 
-model Example {
-    id        String   @id @default(cuid())
+model Diary {
+    id      String @id @default(cuid())
+    title   String
+    content String
+
+    user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+    userId String
+
     createdAt DateTime @default(now())
     updatedAt DateTime @updatedAt
 
-    @@map("example")
+    @@map("diary")
 }
 
 model Account {
@@ -73,6 +79,7 @@ model User {
     image         String?
     accounts      Account[]
     sessions      Session[]
+    diaries       Diary[]
 }
 
 model VerificationToken {

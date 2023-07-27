@@ -1,6 +1,7 @@
 import "~/styles/globals.css";
 
 import type { AppType } from "next/app";
+import { ChakraProvider } from "@chakra-ui/react";
 
 import { SessionProvider } from "@acme/auth/client";
 import { type Session } from "@acme/auth/types";
@@ -13,7 +14,9 @@ const MyApp: AppType<{ session: Session | null }> = ({
 }) => {
   return (
     <SessionProvider session={session}>
-      <Component {...pageProps} />
+      <ChakraProvider>
+        <Component {...pageProps} />
+      </ChakraProvider>
     </SessionProvider>
   );
 };

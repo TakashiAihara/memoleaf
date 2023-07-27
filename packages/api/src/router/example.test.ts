@@ -3,7 +3,7 @@ import { expect, test } from "vitest";
 
 import { PrismaClient } from "@acme/db";
 
-import { exampleRouter } from "./example";
+import { diaryRouter } from "./diary";
 
 const prisma = new PrismaClient();
 
