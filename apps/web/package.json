@@ -27,7 +27,7 @@
     "@trpc/react-query": "^10.35.0",
     "@trpc/server": "^10.35.0",
     "framer-motion": "^10.13.1",
-    "next": "^13.4.12",
+    "next": "^15.5.28",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-hook-form": "^7.45.2",
